@@ -1,7 +1,9 @@
 import {
 	ChevronDown,
+	NotificationsOutline,
 	PersonCircle,
 	SearchOutline,
+	SettingsOutline,
 } from "react-ionicons";
 
 const Navbar = () => {
@@ -30,9 +32,18 @@ const Navbar = () => {
 					className="w-full bg-gray-100 outline-none text-[15px]"
 				/>
 			</div>
+			<div className="md:flex hidden items-center gap-4">
+				<div className="grid place-items-center bg-gray-100 rounded-full p-2 cursor-pointer">
+					<SettingsOutline color={"#444"} />
+				</div>
+				<div className="grid place-items-center bg-gray-100 rounded-full p-2 cursor-pointer">
+					<NotificationsOutline color={"#444"} />
+				</div>
+			</div>
 		</div>
 	);
 };
 
 export default Navbar;
+
 

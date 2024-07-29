@@ -141,6 +141,28 @@ const AddModal = ({ isOpen, onClose, setOpen, handleAddTask }: AddModalProps) =>
 						</div>
 					))}
 				</div>
+				<div className="w-full flex items-center gap-4 justify-between">
+					<input
+						type="text"
+						name="alt"
+						value={taskData.alt}
+						onChange={handleChange}
+						placeholder="Image Alt"
+						className="w-full h-12 px-3 outline-none rounded-md bg-slate-100 border border-slate-300 text-sm"
+					/>
+					<input
+						type="file"
+						name="image"
+						onChange={handleImageChange}
+						className="w-full"
+					/>
+				</div>
+				<button
+					className="w-full mt-3 rounded-md h-9 bg-orange-400 text-blue-50 font-medium"
+					onClick={handleSubmit}
+				>
+					Submit Task
+				</button>
 			</div>
 		</div>
 	);
@@ -148,4 +170,4 @@ const AddModal = ({ isOpen, onClose, setOpen, handleAddTask }: AddModalProps) =>
 
 export default AddModal;
 
-// Commit message: "Added tag functionality and image upload"
+

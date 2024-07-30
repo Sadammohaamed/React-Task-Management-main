@@ -1,10 +1,12 @@
 import {
-	HomeOutline,
 	AppsOutline,
 	GridOutline,
-	PieChartOutline,
-	PeopleOutline,
+	HomeOutline,
+	LogOutOutline,
+	NewspaperOutline,
 	NotificationsOutline,
+	PeopleOutline,
+	PieChartOutline,
 } from "react-ionicons";
 
 const Sidebar = () => {
@@ -75,8 +77,18 @@ const Sidebar = () => {
 			),
 			active: false,
 		},
+		{
+			title: "Newsletter",
+			icon: (
+				<NewspaperOutline
+					color="#555"
+					width="22px"
+					height="22px"
+				/>
+			),
+			active: false,
+		},
 	];
-
 	return (
 		<div className="fixed left-0 top-0 md:w-[230px] w-[60px] overflow-hidden h-full flex flex-col">
 			<div className="w-full flex items-center md:justify-start justify-center md:pl-5 h-[70px] bg-[#fff]">
@@ -97,10 +109,15 @@ const Sidebar = () => {
 						</div>
 					);
 				})}
+				<div className="flex absolute bottom-4 items-center md:justify-start justify-center gap-2 md:w-[90%] w-[70%] rounded-lg hover:bg-orange-300 px-2 py-3 cursor-pointer bg-gray-200">
+					<LogOutOutline />
+					<span className="font-medium text-[15px] md:block hidden">Log Out</span>
+				</div>
 			</div>
 		</div>
 	);
 };
 
 export default Sidebar;
+
 

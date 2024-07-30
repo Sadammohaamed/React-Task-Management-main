@@ -8,7 +8,7 @@ interface TaskProps {
 }
 
 const Task = ({ task, provided }: TaskProps) => {
-	const { title, description, priority, deadline, tags } = task;
+	const { title, description, priority, deadline, image, alt, tags } = task;
 
 	return (
 		<div
@@ -17,6 +17,13 @@ const Task = ({ task, provided }: TaskProps) => {
 			{...provided.dragHandleProps}
 			className="w-full cursor-grab bg-[#fff] flex flex-col justify-between gap-3 items-start shadow-sm rounded-xl px-3 py-4"
 		>
+			{image && alt && (
+				<img
+					src={image}
+					alt={alt}
+					className="w-full h-[170px] rounded-lg"
+				/>
+			)}
 			<div className="flex items-center gap-2">
 				{tags.map((tag) => (
 					<span

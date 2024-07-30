@@ -8,7 +8,7 @@ interface TaskProps {
 }
 
 const Task = ({ task, provided }: TaskProps) => {
-	const { title, description, priority, deadline } = task;
+	const { title, description, priority, deadline, tags } = task;
 
 	return (
 		<div
@@ -17,6 +17,17 @@ const Task = ({ task, provided }: TaskProps) => {
 			{...provided.dragHandleProps}
 			className="w-full cursor-grab bg-[#fff] flex flex-col justify-between gap-3 items-start shadow-sm rounded-xl px-3 py-4"
 		>
+			<div className="flex items-center gap-2">
+				{tags.map((tag) => (
+					<span
+						key={tag.title}
+						className="px-[10px] py-[2px] text-[13px] font-medium rounded-md"
+						style={{ backgroundColor: tag.bg, color: tag.text }}
+					>
+						{tag.title}
+					</span>
+				))}
+			</div>
 			<div className="w-full flex items-start flex-col gap-0">
 				<span className="text-[15.5px] font-medium text-[#555]">{title}</span>
 				<span className="text-[13.5px] text-gray-500">{description}</span>
@@ -46,5 +57,4 @@ const Task = ({ task, provided }: TaskProps) => {
 };
 
 export default Task;
-
 

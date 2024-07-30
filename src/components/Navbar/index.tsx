@@ -4,6 +4,7 @@ import {
 	PersonCircle,
 	SearchOutline,
 	SettingsOutline,
+	ShareSocialOutline,
 } from "react-ionicons";
 
 const Navbar = () => {
@@ -34,6 +35,9 @@ const Navbar = () => {
 			</div>
 			<div className="md:flex hidden items-center gap-4">
 				<div className="grid place-items-center bg-gray-100 rounded-full p-2 cursor-pointer">
+					<ShareSocialOutline color={"#444"} />
+				</div>
+				<div className="grid place-items-center bg-gray-100 rounded-full p-2 cursor-pointer">
 					<SettingsOutline color={"#444"} />
 				</div>
 				<div className="grid place-items-center bg-gray-100 rounded-full p-2 cursor-pointer">
@@ -45,5 +49,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
 

@@ -2,6 +2,9 @@ import {
 	HomeOutline,
 	AppsOutline,
 	GridOutline,
+	PieChartOutline,
+	PeopleOutline,
+	NotificationsOutline,
 } from "react-ionicons";
 
 const Sidebar = () => {
@@ -39,6 +42,39 @@ const Sidebar = () => {
 			),
 			active: false,
 		},
+		{
+			title: "Analytics",
+			icon: (
+				<PieChartOutline
+					color="#555"
+					width="22px"
+					height="22px"
+				/>
+			),
+			active: false,
+		},
+		{
+			title: "Workflows",
+			icon: (
+				<PeopleOutline
+					color="#555"
+					width="22px"
+					height="22px"
+				/>
+			),
+			active: false,
+		},
+		{
+			title: "Notifications",
+			icon: (
+				<NotificationsOutline
+					color="#555"
+					width="22px"
+					height="22px"
+				/>
+			),
+			active: false,
+		},
 	];
 
 	return (
@@ -67,5 +103,4 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
-
 

@@ -57,6 +57,49 @@ export const Board: Columns = {
 			},
 		],
 	},
+	todo: {
+		name: "To Do",
+		items: [
+			{
+				id: uuidv4(),
+				title: "Admin Panel Front-end",
+				description: "Lorem ipsum dolor sit amet ..",
+				priority: "medium",
+				deadline: 50,
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+		],
+	},
+	doing: {
+		name: "Doing",
+		items: [
+			{
+				id: uuidv4(),
+				title: "Admin Panel Front-end",
+				description: "Lorem ipsum dolor sit amet ..",
+				priority: "low",
+				deadline: 50,
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+			{
+				id: uuidv4(),
+				title: "Admin Panel Back-end",
+				description: "Lorem ipsum dolor sit amet ..",
+				priority: "medium",
+				deadline: 50,
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+		],
+	},
 };
 
 

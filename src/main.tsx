@@ -13,5 +13,4 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 			</StyleSheetManager>
 		</BrowserRouter>
 	</Suspense>
-
 );
